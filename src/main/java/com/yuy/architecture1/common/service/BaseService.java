@@ -8,11 +8,13 @@ import com.yuy.pageutil.Page;
 
 
 
+
 public class BaseService<M, QM extends BaseModel> implements IBaseService<M,QM> {
 	private BaseDAO dao = null;
 	public void setDAO(BaseDAO dao){
 		this.dao = dao;
 	}
+	
 	public void create(M m) {
 		dao.create(m);
 	}
