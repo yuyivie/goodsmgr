@@ -30,6 +30,8 @@ public class BaseService<M, QM extends BaseModel> implements IBaseService<M,QM> 
 		return (M)dao.getByUuid(uuid);
 	}
 
+	
+	@SuppressWarnings("unchecked")
 	public Page<M> getByConditionPage(QM qm) {
 		List<M> list = dao.getByConditionPage(qm);
 		qm.getPage().setResult(list);
